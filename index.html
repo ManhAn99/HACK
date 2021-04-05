@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+ <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.12.0/css/all.css">
+ <link rel="preconnect" href="https://fonts.gstatic.com">
+ <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+<section class="header">
+    <h1><span> BMI </span> Caculator</h1>
+       <div class="header_text">
+       <p onclick="showSearch()" id="search">Tìm kiếm thông tin </p>
+       <p>Liên Hệ</p>
+    </div>
+</section>
+
+<section class="background">
+   <div class="background_img">
+       <img src="image/bg.png"  alt="">
+   </div>
+   <div class="background_text">
+       <div class="big_text">
+           <h2>Tính chỉ số BMI - Chỉ số khối cơ thể</h2>
+       </div>
+       <div class="small_text">
+           <p>Sử dụng công cụ này để kiểm tra chỉ số khối cơ thể (BMI) để biết bạn có đang ở mức cân nặng hợp lý hay không. Bạn cũng có thể kiểm tra chỉ số BMI của trẻ tại đây.</p>
+       </div>
+   </div>
+   <div class="weight_img">
+       <img src="image/weight.png" alt="">
+   </div>
+</section>
+
+
+
+<section class="search">
+   <img onclick="closesearch()" id="search_close" src="image/close.png" alt="" style="width:30px;height:30px;position:absolute;top:15px;right:140px;cursor: pointer;">
+    <div class="search_content" style="margin-left:100px">
+        <ul>
+            <li><a href="#">Bệnh tiêu hóa </a></li>
+            <li><a href="#">Chăm sóc giấc ngủ </a></li>
+            <li><a href="#">Mang thai </a></li>
+            <li><a href="#">Sức khỏe phụ nữ </a></li>
+            <li><a href="#">Thói quen lành mạnh </a></li>
+            <li><a href="#">Thói quen lành mạnh </a></li>
+        </ul>
+    </div>
+    <div class="search_content">
+        <ul>
+            <li><a href="#">Bệnh tiêu hóa </a></li>
+            <li><a href="#">Chăm sóc giấc ngủ </a></li>
+            <li><a href="#">Mang thai </a></li>
+            <li><a href="#">Sức khỏe phụ nữ </a></li>
+            <li><a href="#">Thói quen lành mạnh </a></li>
+            <li><a href="#">Thói quen lành mạnh </a></li>
+        </ul>
+    </div>
+    <div class="search_content">
+        <ul>
+            <li><a href="#">Bệnh tiêu hóa </a></li>
+            <li><a href="#">Chăm sóc giấc ngủ </a></li>
+            <li><a href="#">Mang thai </a></li>
+            <li><a href="#">Sức khỏe phụ nữ </a></li>
+            <li><a href="#">Thói quen lành mạnh </a></li>
+            <li><a href="#">Thói quen lành mạnh </a></li>
+        </ul>
+    </div>
+    <div class="search_content">
+        <ul>
+            <li><a href="#">Bệnh tiêu hóa </a></li>
+            <li><a href="#">Chăm sóc giấc ngủ </a></li>
+            <li><a href="#">Mang thai </a></li>
+            <li><a href="#">Sức khỏe phụ nữ </a></li>
+            <li><a href="#">Thói quen lành mạnh </a></li>
+            <li><a href="#">Thói quen lành mạnh </a></li>
+        </ul>
+    </div>
+    <div class="search_content">
+        <ul>
+            <li><a href="#">Bệnh tiêu hóa </a></li>
+            <li><a href="#">Chăm sóc giấc ngủ </a></li>
+            <li><a href="#">Mang thai </a></li>
+            <li><a href="#">Sức khỏe phụ nữ </a></li>
+            <li><a href="#">Thói quen lành mạnh </a></li>
+            <li><a href="#">Thói quen lành mạnh </a></li>
+        </ul>
+    </div>
+</section>
+
+<section class="caculator">
+  <div class="caculator_content">
+    <div class="caculator_gender">
+        <div class="text_gender">
+            <h3 style="font-size: 20px;
+            color: rgb(121, 118, 118);
+            font-weight: 700;">Giới tính của bạn</h3>
+        </div>
+        <div class="img_gender">
+            <div class="image_gender" id="male" onclick="checkMale()">
+                <img class="color_gender"  src="https://img.icons8.com/bubbles/100/000000/male-beloved.png"/>
+              
+            </div>
+            <div class="image_gender" id="female" style="margin-left: 20px;" onclick="checkFemale()">
+                <img class="color_gender"  src="https://img.icons8.com/bubbles/100/000000/gemologist-female.png"/>
+                
+            </div>
+        </div>
+
+    </div>
+   <div class="caculator_select">
+    <form action="" id="select">
+        <div class="select_content">
+            <span>Bạn bao nhiêu tuổi?(năm)</span><br>
+            <input type="text" name="age">
+        </div>
+        <div class="select_content">
+            <span>Bạn cao bao nhiêu?(cm)</span><br>
+            <input type="text" name="height">
+        </div>
+        <div class="select_content">
+            <span>Cân nặng của bạn?(kg)</span><br>
+            <input type="text" name="weight">
+        </div>
+        <div class="btn">
+        <button id='select_btn' >Tính Ngay</button>
+    </div>
+    </form>
+</div>
+</div>
+</section>
+
+ 
+<section class="container">
+    <div class="content under_weight">
+    <p class="container_text" id="container_text" style="display: none;">Chỉ số BMI của bạn là : <span></span></p>
+    <div class="container_content" >
+        <div class="box">
+            <div class="box_image">
+           <img id="underweight-male-image" src="" alt="">
+            </div>
+           <div class="text">
+            <p id="underweight-text" class="none_text"> Thiếu cân<br> < 18.5</p>
+        </div>
+        </div>
+        <div class="box">
+            <div class="box_image">
+           <img id="healthy-male-image" src=''alt="">
+            </div>
+            <div class="text">
+            <p id="healthy-text" class="none_text">Khỏe mạnh <br>18.5 - 24.9</p>
+        </div>
+    </div>
+        <div class="box">
+            <div class="box_image">
+           <img id="overweight-male-image" src='' alt="">
+            </div>
+            <div class="text">
+                <p id="overweight-text" class="none_text"> Thừa cân  <br> 25 - 29.9</p>
+            </div>
+        </div>
+      
+        <div class="box">
+            <div class="box_image">
+           <img  id="obesetype1-male-image" src= '' alt="">
+            </div>
+            <div class="text">
+                <p id="obesetype1-text" class="none_text">Tiểu đường type 1 <br> 30 - 34.9</p>
+            </div>
+        </div>
+       
+        <div class="box">
+            <div class="box_image">
+           <img   id="obesetype2-male-image"src= ''alt="">
+            </div>
+           <div class="text">
+            <p id="obesetype2-text" class="none_text display_text">Tiểu đường type 2 <br> 35 <</p>
+           </div>
+        </div>
+    </div>
+   
+</div>
+
+
+
+
+</section>
+
+<script src="main.js"></script>
+
+</body>
+</html>
